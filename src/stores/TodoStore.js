@@ -41,12 +41,15 @@ class TodoStore extends EventEmitter{
         switch(action.type){
             case "CREATE_TODO": {
                 this.createTodo(action.task);
+                break;
             }
 
             case "RECEIVE_TODOS": {
                 this.todos = action.todos;
                 this.emit('change');
+                break;
             }
+            
         }
     }
 }
